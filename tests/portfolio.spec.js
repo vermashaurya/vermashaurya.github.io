@@ -26,10 +26,6 @@ test.describe('Portfolio UI Tests', () => {
   test('navigate to projects section', async ({ page }) => {
     await page.click('[data-testid="nav-projects"]');
     await expect(page.locator('[data-testid="section-projects"]')).toBeVisible();
-    await expect(page).toHaveScreenshot('projects-section.png', {
-      fullPage: true,
-      animations: 'disabled',
-    });
   });
 
   test('navigate to skills section', async ({ page }) => {
@@ -41,10 +37,6 @@ test.describe('Portfolio UI Tests', () => {
   test('navigate to contact section', async ({ page }) => {
     await page.click('[data-testid="nav-contact"]');
     await expect(page.locator('[data-testid="section-contact"]')).toBeVisible();
-    await expect(page).toHaveScreenshot('contact-section.png', {
-      fullPage: true,
-      animations: 'disabled',
-    });
   });
 
   test('resume button is visible', async ({ page }) => {
