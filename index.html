@@ -41,15 +41,15 @@
         </a>
 
         <nav class="site-nav">
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Toolkit</a>
-          <a href="#hobbies">Hobbies</a>
-          <a href="#nearby">Nearby</a>
-          <a href="#contact">Contact</a>
+          <a href="#experience" data-testid="nav-experience">Experience</a>
+          <a href="#projects" data-testid="nav-projects">Projects</a>
+          <a href="#skills" data-testid="nav-skills">Toolkit</a>
+          <a href="#hobbies" data-testid="nav-hobbies">Hobbies</a>
+          <a href="#nearby" data-testid="nav-nearby">Nearby</a>
+          <a href="#contact" data-testid="nav-contact">Contact</a>
         </nav>
 
-        <a class="nav-cta" href="assets/shaurya-verma-resume.pdf" target="_blank" rel="noreferrer"
+        <a class="nav-cta" href="assets/shaurya-verma-resume.pdf" target="_blank" rel="noreferrer" data-testid="btn-resume"
           >Resume</a
         >
       </header>
@@ -71,6 +71,7 @@
                 href="mailto:verma.shaurya2003@gmail.com"
                 target="_blank"
                 rel="noreferrer"
+                data-testid="btn-email"
                 >Let’s Talk</a
               >
               <a
@@ -78,9 +79,10 @@
                 href="assets/shaurya-verma-resume.pdf"
                 download="Shaurya-Verma-Resume.pdf"
                 rel="noreferrer"
+                data-testid="btn-download-resume"
                 >Download Resume</a
               >
-              <a class="button button-secondary" href="#skills">See Toolkit</a>
+              <a class="button button-secondary" href="#skills" data-testid="btn-see-toolkit">See Toolkit</a>
             </div>
 
             <div class="hero-notes">
@@ -197,7 +199,7 @@
           </div>
         </section>
 
-        <section class="section" id="experience">
+        <section class="section" id="experience" data-testid="section-experience">
           <div class="section-head reveal">
             <div>
               <p class="eyebrow">Experience</p>
@@ -290,7 +292,7 @@
           </div>
         </section>
 
-        <section class="section" id="projects">
+        <section class="section" id="projects" data-testid="section-projects">
           <div class="section-head reveal">
             <div>
               <p class="eyebrow">Selected Projects</p>
@@ -345,7 +347,7 @@
           </div>
         </section>
 
-        <section class="section" id="skills">
+        <section class="section" id="skills" data-testid="section-skills">
           <div class="section-head reveal">
             <div>
               <p class="eyebrow">Toolkit</p>
@@ -452,7 +454,7 @@
           </div>
         </section>
 
-        <section class="section" id="hobbies">
+        <section class="section" id="hobbies" data-testid="section-hobbies">
           <div class="section-head reveal">
             <div>
               <p class="eyebrow">Hobbies & Personality</p>
@@ -531,7 +533,7 @@
                   <p class="eyebrow">Chess Corner</p>
                   <h3>White to move, mate in one.</h3>
                 </div>
-                <button id="chess-reset" class="ghost-button" type="button">Reset</button>
+                <button id="chess-reset" class="ghost-button" type="button" data-testid="chess-reset">Reset</button>
               </div>
 
               <p class="chess-copy">
@@ -543,7 +545,7 @@
                 <div class="board-files">
                   <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
                 </div>
-                <div id="chess-board" class="chess-board" aria-label="Chess puzzle board"></div>
+                <div id="chess-board" class="chess-board" aria-label="Chess puzzle board" data-testid="chess-board"></div>
               </div>
 
               <p id="chess-status" class="chess-status">
@@ -558,7 +560,7 @@
               </div>
             </article>
 
-            <article class="map-card interactive-shell reveal" id="nearby">
+            <article class="map-card interactive-shell reveal" id="nearby" data-testid="section-nearby">
               <div class="map-copy">
                 <p class="eyebrow">Nearby?</p>
                 <h3>If you’re around Brookefield, hit me up.</h3>
@@ -572,6 +574,7 @@
                   href="https://www.google.com/maps/search/?api=1&query=C+Block,+AECS+Layout,+Brookefield,+Bengaluru,+Karnataka"
                   target="_blank"
                   rel="noreferrer"
+                  data-testid="btn-open-maps"
                   >Open in Maps</a
                 >
               </div>
@@ -586,7 +589,7 @@
           </div>
         </section>
 
-        <section class="section contact-section reveal" id="contact">
+        <section class="section contact-section reveal" id="contact" data-testid="section-contact">
           <p class="eyebrow">Contact</p>
           <h2>Looking for engineers who can ship across the stack and still feel human?</h2>
           <p class="contact-text">
@@ -599,6 +602,7 @@
               href="mailto:verma.shaurya2003@gmail.com"
               target="_blank"
               rel="noreferrer"
+              data-testid="btn-email-contact"
               >Email Me</a
             >
             <a
@@ -606,6 +610,7 @@
               href="https://www.linkedin.com/in/verma-shaurya/"
               target="_blank"
               rel="noreferrer"
+              data-testid="btn-linkedin"
               >LinkedIn</a
             >
             <a
@@ -613,6 +618,7 @@
               href="https://github.com/vermashaurya"
               target="_blank"
               rel="noreferrer"
+              data-testid="btn-github"
               >GitHub</a
             >
           </div>

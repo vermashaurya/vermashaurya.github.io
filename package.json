@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-web",
+  "version": "1.0.0",
+  "description": "Personal Interactive Portfolio Website",
+  "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vermashaurya/vermashaurya.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vermashaurya/vermashaurya.github.io/issues"
+  },
+  "homepage": "https://github.com/vermashaurya/vermashaurya.github.io#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}
