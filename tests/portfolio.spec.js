@@ -4,10 +4,18 @@ const BASE_URL = 'https://vermashaurya.github.io';
 
 test.describe('Portfolio UI Tests', () => {
 
-  test('homepage loads correctly', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
     await page.goto(BASE_URL);
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000);
+  });
+
+  test('homepage loads correctly', async ({ page }) => {
     await expect(page).toHaveTitle(/Shaurya Verma/);
-    await expect(page).toHaveScreenshot('homepage.png');
+    await expect(page).toHaveScreenshot('homepage.png', {
+      fullPage: true,
+      animations: 'disabled',
+    });
   });
 
   test('hero section renders', async ({ page }) => {
@@ -16,10 +24,12 @@ test.describe('Portfolio UI Tests', () => {
   });
 
   test('navigate to projects section', async ({ page }) => {
-    await page.goto(BASE_URL);
     await page.click('[data-testid="nav-projects"]');
     await expect(page.locator('[data-testid="section-projects"]')).toBeVisible();
-    await expect(page).toHaveScreenshot('projects-section.png');
+    await expect(page).toHaveScreenshot('projects-section.png', {
+      fullPage: true,
+      animations: 'disabled',
+    });
   });
 
   test('navigate to skills section', async ({ page }) => {
@@ -29,10 +39,12 @@ test.describe('Portfolio UI Tests', () => {
   });
 
   test('navigate to contact section', async ({ page }) => {
-    await page.goto(BASE_URL);
     await page.click('[data-testid="nav-contact"]');
     await expect(page.locator('[data-testid="section-contact"]')).toBeVisible();
-    await expect(page).toHaveScreenshot('contact-section.png');
+    await expect(page).toHaveScreenshot('contact-section.png', {
+      fullPage: true,
+      animations: 'disabled',
+    });
   });
 
   test('resume button is visible', async ({ page }) => {
