@@ -1,21 +1,3 @@
-// @ts-check
-import { defineConfig } from '@playwright/test';
-
-export default defineConfig({
-  testDir: './tests',
-  timeout: 30 * 1000,
-  expect: {
-    timeout: 5000,
-  },
-  use: {
-    baseURL: 'https://vermashaurya.github.io',
-    headless: true,
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'on-first-retry',
-  },
-  reporter: [['html', { open: 'never' }]],
-});
 import { test, expect } from '@playwright/test';
 
 const BASE_URL = 'https://vermashaurya.github.io';
@@ -40,7 +22,6 @@ test.describe('Portfolio UI Tests', () => {
     await expect(page).toHaveScreenshot('projects-section.png');
   });
 
-  // 4️⃣ Navbar navigation - Skills
   test('navigate to skills section', async ({ page }) => {
     await page.goto(BASE_URL);
     await page.click('[data-testid="nav-skills"]');
