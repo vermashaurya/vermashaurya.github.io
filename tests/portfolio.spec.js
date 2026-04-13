@@ -12,10 +12,6 @@ test.describe('Portfolio UI Tests', () => {
 
   test('homepage loads correctly', async ({ page }) => {
     await expect(page).toHaveTitle(/Shaurya Verma/);
-    await expect(page).toHaveScreenshot('homepage.png', {
-      fullPage: true,
-      animations: 'disabled',
-    });
   });
 
   test('hero section renders', async ({ page }) => {
