@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/vermashaurya/vermashaurya.github.io#readme",
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.59.1"
   }
 }
