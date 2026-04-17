@@ -13,8 +13,9 @@
       content="Full-stack engineer, general enthusiast, traveler, guitarist, designer, and chess player."
     />
     <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#140e0b" />
     <title>Shaurya Verma | Software Engineer</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/newfavicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,45 +25,133 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="site-loader" aria-hidden="true">
+      <div class="site-loader-mark">SV</div>
+      <p>Readable products. Clean systems. Actual personality.</p>
+    </div>
+
     <div class="page-shell">
       <div class="ambient ambient-one"></div>
       <div class="ambient ambient-two"></div>
       <div class="ambient ambient-three"></div>
       <div class="grid-mesh"></div>
+      <div class="noise-layer"></div>
       <div class="cursor-glow"></div>
 
-      <header class="site-header">
-        <a class="brand" href="#top">
-          <span class="brand-mark">SV</span>
-          <span class="brand-copy">
-            <strong>Shaurya Verma</strong>
-            <span>Developer • Technology Enthusiast</span>
-          </span>
-        </a>
+      <header class="site-header" data-header>
+        <div class="header-bar">
+          <button
+            class="brand brand-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="profile-panel"
+            data-profile-toggle
+          >
+            <span class="brand-avatar">
+              <img src="assets/icon.svg" alt="Shaurya Verma profile photo" />
+            </span>
+            <span class="brand-copy">
+              <strong>Shaurya Verma</strong>
+              <span>Developer • Technology Enthusiast</span>
+            </span>
+          </button>
 
-        <nav class="site-nav">
-          <a href="#experience" data-testid="nav-experience">Experience</a>
-          <a href="#projects" data-testid="nav-projects">Projects</a>
-          <a href="#skills" data-testid="nav-skills">Toolkit</a>
-          <a href="#hobbies" data-testid="nav-hobbies">Hobbies</a>
-          <a href="#nearby" data-testid="nav-nearby">Nearby</a>
-          <a href="#contact" data-testid="nav-contact">Contact</a>
-        </nav>
+          <nav class="site-nav" id="site-nav">
+            <a href="#experience" data-testid="nav-experience">Experience</a>
+            <a href="#projects" data-testid="nav-projects">Projects</a>
+            <a href="#skills" data-testid="nav-skills">Toolkit</a>
+            <a href="#hobbies" data-testid="nav-hobbies">Hobbies</a>
+            <a href="#nearby" data-testid="nav-nearby">Nearby</a>
+            <a href="#contact" data-testid="nav-contact">Contact</a>
+          </nav>
 
-        <a class="nav-cta" href="assets/shaurya-verma-resume.pdf" target="_blank" rel="noreferrer" data-testid="btn-resume"
-          >Resume</a
-        >
+          <div class="header-actions">
+            <a
+              class="nav-cta"
+              href="assets/shaurya-verma-resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              data-testid="btn-resume"
+              >Resume</a
+            >
+
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-nav"
+              data-nav-toggle
+            >
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <section class="profile-panel" id="profile-panel" hidden>
+          <div class="profile-panel-media">
+            <img src="assets/pfp.jpg" alt="Large portrait of Shaurya Verma" />
+          </div>
+          <div class="profile-panel-copy">
+            <p class="eyebrow">Quick hello</p>
+            <h2>Shaurya Verma</h2>
+            <p class="profile-text">
+              Software engineer in Bengaluru. Reach out for product-minded software
+              roles, interesting builds, travel stories, chess games, or just a
+              good engineering conversation.
+            </p>
+            <div class="profile-meta">
+              <a href="https://www.linkedin.com/in/verma-shaurya/" target="_blank" rel="noreferrer"
+                >LinkedIn</a
+              >
+              <a href="https://github.com/vermashaurya" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <label class="poke-field" for="poke-name">
+              <span>Want to leave a name?</span>
+              <input id="poke-name" name="poke-name" type="text" placeholder="Optional" />
+            </label>
+            <button class="button button-primary poke-button" type="button" data-poke-button>
+              Poke me
+            </button>
+            <p class="poke-note">
+              Not completely genZ am I right?, this will send me an alert like the
+              early Facebook days!
+            </p>
+          </div>
+        </section>
       </header>
+
+      <button
+        class="theme-toggle theme-toggle-floating"
+        type="button"
+        aria-label="Toggle color theme"
+        data-theme-toggle
+      >
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-thumb"></span>
+        </span>
+        <span class="theme-toggle-copy">Light</span>
+      </button>
+
+      <aside class="side-nav" aria-label="Section quick links">
+        <a href="#top" data-section-link="top" data-label="Top">Top</a>
+        <a href="#experience" data-section-link="experience" data-label="Experience">Experience</a>
+        <a href="#projects" data-section-link="projects" data-label="Projects">Projects</a>
+        <a href="#skills" data-section-link="skills" data-label="Toolkit">Toolkit</a>
+        <a href="#hobbies" data-section-link="hobbies" data-label="Play">Play</a>
+        <a href="#contact" data-section-link="contact" data-label="Contact">Contact</a>
+      </aside>
 
       <main id="top">
         <section class="hero section">
           <div class="hero-copy reveal">
             <p class="eyebrow">Senior Software Engineer at Capgemini</p>
-            <h1>Readable products, reliable systems, and a little personality.</h1>
+            <h1>Readable products, reliable systems, and a little theatre on load.</h1>
             <p class="hero-text">
-              I build full-stack experiences with Angular / React, ASP.NET Web API / Java, and
-              AI-assisted workflows. I care about clarity in interfaces, sensible
-              architecture, and shipping things that are both useful and memorable.
+              I build full-stack experiences with Angular, React, ASP.NET Web API,
+              Java, and AI-assisted workflows. I care about clarity in interfaces,
+              sensible architecture, and shipping things that look intentional the
+              first time someone lands on them.
             </p>
 
             <div class="hero-actions">
@@ -82,19 +171,21 @@
                 data-testid="btn-download-resume"
                 >Download Resume</a
               >
-              <a class="button button-secondary" href="#skills" data-testid="btn-see-toolkit">See Toolkit</a>
+              <a class="button button-secondary" href="#skills" data-testid="btn-see-toolkit"
+                >See Toolkit</a
+              >
             </div>
 
             <div class="hero-notes">
-              <article class="note-pill">
+              <article class="note-pill reveal">
                 <strong>Frontend that reads well</strong>
-                <span>Readable layouts, smoother interactions, fewer rough edges.</span>
+                <span>Readable layouts, cleaner interaction states, fewer rough edges.</span>
               </article>
-              <article class="note-pill">
+              <article class="note-pill reveal">
                 <strong>Backend that scales sanely</strong>
-                <span>APIs, integration work, and systems built to stay maintainable.</span>
+                <span>APIs, integrations, and systems built to stay maintainable.</span>
               </article>
-              <article class="note-pill">
+              <article class="note-pill reveal">
                 <strong>Human outside the IDE</strong>
                 <span>Travel, sport, music, design, and enough curiosity to stay interesting.</span>
               </article>
@@ -102,13 +193,24 @@
           </div>
 
           <div class="hero-stage reveal">
-            <div class="scene-stack tilt-shell interactive-shell" data-tilt>
-              <article class="scene-card scene-main">
+            <div class="portrait-orbit" data-tilt>
+              <article class="portrait-card interactive-shell">
+                <div class="portrait-loader">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="portrait-frame">
+                  <img src="assets/self-image.png" alt="Shaurya Verma standing portrait" />
+                </div>
+              </article>
+
+              <article class="shipping-note interactive-shell">
                 <p class="card-kicker">Currently shipping</p>
-                <h2>Angular components, .NET microservices, and context-aware AI systems.</h2>
+                <h3>Angular components, .NET microservices, and context-aware AI systems.</h3>
                 <p>
-                  Capgemini, Bengaluru. Building practical enterprise software with
-                  modern frontend structure and backend discipline.
+                  Building practical enterprise software with modern
+                  frontend structure and backend discipline.
                 </p>
                 <div class="tag-row">
                   <span>Angular</span>
@@ -118,25 +220,26 @@
                   <span>Java</span>
                 </div>
               </article>
-              <div class="scene-subgrid">
-                <article class="scene-card scene-secondary parallax" data-depth="10">
-                  <p class="card-kicker">Open to</p>
-                  <h3>Software roles with ownership</h3>
-                  <p>
-                    AI Integration, full-stack or product-minded engineering work
-                    where shipping quality matters.
-                  </p>
-                </article>
 
-                <article class="scene-card scene-secondary parallax" data-depth="18">
-                  <p class="card-kicker">Background</p>
-                  <h3>B.Tech, VIT Vellore</h3>
-                  <p>
-                    Computer Science graduate with hands-on work across enterprise
-                    delivery, product launches, robotics, and applied AI.
-                  </p>
-                </article>
-              </div>
+              <article class="floating-note floating-note-one interactive-shell">
+                <p class="card-kicker">Open to</p>
+                <h3>Ownership-heavy software roles</h3>
+                <p>
+                  AI integration, full-stack, or product-minded work where quality
+                  matters more than cargo-cult velocity.
+                </p>
+              </article>
+
+              <!-- <article class="floating-note floating-note-two interactive-shell">
+                <p class="card-kicker">Background</p>
+                <h3>B.Tech, VIT Vellore</h3>
+                <p>
+                  Computer Science graduate with hands-on work across enterprise
+                  delivery, robotics, launches, and applied AI.
+                </p>
+              </article> -->
+
+              
             </div>
           </div>
         </section>
@@ -158,43 +261,62 @@
           <div class="section-head reveal">
             <div>
               <p class="eyebrow">This is me</p>
-              <h2>Not just another engineer card on the internet.</h2>
+              <h2>More tactile than a normal about section.</h2>
             </div>
             <p class="section-intro">
-              Minimal inspiration from your Linktree, but translated into something
-              more personal: a site that still feels like a quick introduction,
-              while carrying depth, polish, and stronger storytelling.
+              Reworked into interactive depth cards instead of flat copy blocks. The
+              motion borrows from the CodePen reference, but the content is tuned to
+              your actual story and the white-border aesthetic you liked.
             </p>
           </div>
 
-          <div class="story-grid">
-            <article class="story-card interactive-shell reveal">
-              <p class="card-kicker">How I work</p>
-              <h3>Engineer-first, product-aware</h3>
-              <p>
-                I like interfaces that feel clean, systems that are easy to reason
-                about, and implementation decisions that hold up after launch.
-              </p>
+          <div class="identity-grid">
+            <article class="identity-card reveal" data-tilt>
+              <div class="identity-card-bg" style="background-image: url('assets/scene.png')"></div>
+              <div class="identity-card-copy">
+                <p class="card-kicker">How I work</p>
+                <h3>Engineer-first, product-aware.</h3>
+                <p>
+                  I like interfaces that feel clear, systems that are easy to reason
+                  about, and decisions that still make sense after launch.
+                </p>
+              </div>
             </article>
 
-            <article class="story-card interactive-shell reveal">
-              <p class="card-kicker">What I enjoy</p>
-              <h3>Building with range</h3>
-              <p>
-                Enterprise migration work, frontend craft, automation, AI systems,
-                robotics experiments, and product launches all sit comfortably in
-                the same toolbox for me.
-              </p>
+            <article class="identity-card reveal" data-tilt>
+              <div class="identity-card-bg" style="background-image: url('assets/surf.png')"></div>
+              <div class="identity-card-copy">
+                <p class="card-kicker">Energy</p>
+                <h3>I like momentum.</h3>
+                <p>
+                  Ownership, visible progress, and enough movement that the work
+                  never feels static for too long.
+                </p>
+              </div>
             </article>
 
-            <article class="story-card interactive-shell reveal">
-              <p class="card-kicker">What you should know</p>
-              <h3>I like momentum</h3>
-              <p>
-                I’m at my best where ownership matters: shipping features,
-                connecting APIs, smoothing rough UX, and turning ideas into
-                visible results.
-              </p>
+            <article class="identity-card reveal" data-tilt>
+              <div class="identity-card-bg" style="background-image: url('assets/travel.jpg')"></div>
+              <div class="identity-card-copy">
+                <p class="card-kicker">Perspective</p>
+                <h3>Travel changed the taste level.</h3>
+                <p>
+                  25 countries in and still curious. It keeps my visual references
+                  wider than the usual developer echo chamber.
+                </p>
+              </div>
+            </article>
+
+            <article class="identity-card identity-card-gradient reveal" data-tilt>
+              <div class="identity-card-bg" style="background-image: url('assets/range.png')"></div>
+              <div class="identity-card-copy">
+                <p class="card-kicker">Range</p>
+                <h3>Enterprise migration to robotics in one portfolio.</h3>
+                <p>
+                  Frontend craft, automation, AI systems, robotics experiments, and
+                  launches all sit comfortably in the same toolbox.
+                </p>
+              </div>
             </article>
           </div>
         </section>
@@ -206,9 +328,9 @@
               <h2>Professional work with measurable outcomes.</h2>
             </div>
             <p class="section-intro">
-              The engineering baseline: responsive UI, API integration, distributed systems,
-              and enough ownership to care about quality instead of just shipping
-              code to finish a ticket.
+              The engineering baseline: responsive UI, API integration, distributed
+              systems, and enough ownership to care about quality instead of just
+              closing tickets.
             </p>
           </div>
 
@@ -299,33 +421,37 @@
               <h2>Systems thinking, but still product-shaped.</h2>
             </div>
             <p class="section-intro">
-              Two projects that show different sides of how I build: One grounded
-              in workflow efficiency, the other in real-time control and human
-              interaction.
+              Hover states now do the talking. The card treatment is still aligned
+              with the rest of the page, but the repository action stays hidden
+              until the user earns it with intent.
             </p>
           </div>
 
           <div class="project-grid">
             <article class="project-card interactive-shell reveal">
-              <div class="project-glow"></div>
+              <div class="project-noise"></div>
               <p class="card-kicker">Finance + AI</p>
               <h3>Financial Management Software</h3>
               <p>
-                Built to automate accounting operations, reduce inconsistencies,
-                and make financial workflows easier to navigate for real users.
+                Built to automate accounting operations, reduce inconsistencies, and
+                make financial workflows easier to navigate for real users.
               </p>
               <ul>
                 <li>Stack: Streamlit, Flask, MongoDB, Cohere API, Llama</li>
                 <li>Improved operational efficiency by 35%</li>
                 <li>Reduced financial inconsistencies by 20%</li>
               </ul>
-              <a href="https://github.com/utkarsh-prasadsinha/FinLytics" target="_blank" rel="noreferrer"
+              <a
+                class="project-link"
+                href="https://github.com/utkarsh-prasadsinha/FinLytics"
+                target="_blank"
+                rel="noreferrer"
                 >Open Repository</a
               >
             </article>
 
             <article class="project-card interactive-shell reveal">
-              <div class="project-glow"></div>
+              <div class="project-noise"></div>
               <p class="card-kicker">Robotics + Real-Time Systems</p>
               <h3>Robot Assisted Networking System</h3>
               <p>
@@ -338,6 +464,7 @@
                 <li>Handled 500+ commands per minute with 90%+ sentiment accuracy</li>
               </ul>
               <a
+                class="project-link"
                 href="https://github.com/vermashaurya/accessible-networking-ai"
                 target="_blank"
                 rel="noreferrer"
@@ -354,8 +481,8 @@
               <h2>Broad enough to collaborate, focused enough to deliver.</h2>
             </div>
             <p class="section-intro">
-              The shortlist: The tools I reach for most often, and the areas where
-              I’m most comfortable taking ownership.
+              The shortlist: the tools I reach for most often and the areas where I
+              am most comfortable taking ownership.
             </p>
           </div>
 
@@ -420,35 +547,33 @@
           <div class="certification-block reveal">
             <div class="certification-copy">
               <p class="card-kicker">Certifications</p>
-              <p>
-                Essentials from legacy Saas to Cloud Practicioner
-              </p>
+              <p>Essentials from legacy SaaS to Cloud Practitioner.</p>
             </div>
             <div class="certification-row">
-            <a href="https://vermashaurya.github.io/fcc-websites/" target="_blank" rel="noreferrer"
-              >Responsive Web Development</a
-            >
-            <a
-              href="https://learn.microsoft.com/en-us/users/vermashaurya-8838/credentials/9b4556910f400f4"
-              target="_blank"
-              rel="noreferrer"
-              >Azure Fundamentals</a
-            >
-            <a href="https://mybooksurru.glide.page/" target="_blank" rel="noreferrer"
-              >Glide App Project (Live)</a
-            >
-            <a
-              href="https://coursera.org/share/d79d771e2e962ac5eae9437fae63e91c"
-              target="_blank"
-              rel="noreferrer"
-              >Glide Certificate</a
-            >
-            <a
-              href="https://drive.google.com/file/d/18wFEhSVcYxaEO9g6r717YA57LKakfTpT/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              >Equity Research</a
-            >
+              <a href="https://vermashaurya.github.io/fcc-websites/" target="_blank" rel="noreferrer"
+                >Responsive Web Development</a
+              >
+              <a
+                href="https://learn.microsoft.com/en-us/users/vermashaurya-8838/credentials/9b4556910f400f4"
+                target="_blank"
+                rel="noreferrer"
+                >Azure Fundamentals</a
+              >
+              <a href="https://mybooksurru.glide.page/" target="_blank" rel="noreferrer"
+                >Glide App Project (Live)</a
+              >
+              <a
+                href="https://coursera.org/share/d79d771e2e962ac5eae9437fae63e91c"
+                target="_blank"
+                rel="noreferrer"
+                >Glide Certificate</a
+              >
+              <a
+                href="https://drive.google.com/file/d/18wFEhSVcYxaEO9g6r717YA57LKakfTpT/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                >Equity Research</a
+              >
             </div>
           </div>
         </section>
@@ -460,61 +585,52 @@
               <h2>The part I hope you remember more about me.</h2>
             </div>
             <p class="section-intro">
-              The non-work layer matters. This section is deliberately more playful
-              and interactive than the rest of the site.
+              Less gimmicky motion, better illustration direction, and stronger use
+              of the images you added. On mobile these cards compress instead of
+              asking for a full extra scroll chapter each.
             </p>
           </div>
 
           <div class="hobby-grid">
-            <article class="hobby-card hobby-badminton interactive-shell reveal">
-              <div class="hobby-stage badminton-stage">
-                <span class="racket"></span>
-                <span class="shuttle"></span>
-                <span class="swing-arc"></span>
+            <article class="hobby-card hobby-surf interactive-shell reveal">
+              <div class="hobby-visual hobby-visual-photo">
+                <img src="assets/adventure.png" alt="Shaurya boating" />
               </div>
-              <p class="card-kicker">Badminton</p>
-              <h3>Fast reactions, short rallies, good reset.</h3>
-              <p>
-                Competitive enough to stay fun, casual enough to stay sustainable.
-              </p>
-            </article>
-
-            <article class="hobby-card hobby-swimming interactive-shell reveal">
-              <div class="hobby-stage swim-stage">
-                <span class="wave wave-one"></span>
-                <span class="wave wave-two"></span>
-                <span class="swimmer"></span>
-              </div>
-              <p class="card-kicker">Swimming</p>
+              <p class="card-kicker">Adventure</p>
               <h3>Best way to clear the stack.</h3>
               <p>
                 Useful when the brain has too many tabs open and needs a cleaner
-                kind of rhythm.
+                rhythm than another screen can offer.
+              </p>
+            </article>
+
+            <article class="hobby-card hobby-badminton interactive-shell reveal">
+              <div class="hobby-visual hobby-visual-photo">
+                <img src="assets/sports.png" alt="Shaurya in a go kart" />
+              </div>
+              <p class="card-kicker">Sports</p>
+              <h3>Fast reactions, short rallies, good reset.</h3>
+              <p>
+                Competitive enough to stay sharp, casual enough to still be fun
+                after a long week of engineering work.
               </p>
             </article>
 
             <article class="hobby-card hobby-music interactive-shell reveal">
-              <div class="hobby-stage guitar-stage">
-                <span class="guitar-neck"></span>
-                <span class="string string-one"></span>
-                <span class="string string-two"></span>
-                <span class="string string-three"></span>
-                <span class="pick"></span>
+              <div class="hobby-visual hobby-visual-photo">
+                <img src="assets/guitar.jpg" alt="Shaurya with guitar" />
               </div>
               <p class="card-kicker">Guitar</p>
               <h3>Good reminder that repetition compounds.</h3>
               <p>
                 Music keeps me patient and slightly less likely to overengineer
-                things.
+                things that should just feel right.
               </p>
             </article>
 
             <article class="hobby-card hobby-travel interactive-shell reveal">
-              <div class="hobby-stage travel-stage">
-                <span class="passport passport-one"></span>
-                <span class="passport passport-two"></span>
-                <span class="flight-path"></span>
-                <span class="plane"></span>
+              <div class="hobby-visual hobby-visual-photo">
+                <img src="assets/travel.png" alt="Shaurya in Egypt" />
               </div>
               <p class="card-kicker">Travel</p>
               <h3>25 countries and still curious.</h3>
@@ -532,31 +648,41 @@
                   <p class="eyebrow">Chess Corner</p>
                   <h3>White to move, mate in one.</h3>
                 </div>
-                <button id="chess-reset" class="ghost-button" type="button" data-testid="chess-reset">Reset</button>
+                <button id="chess-reset" class="ghost-button" type="button" data-testid="chess-reset">
+                  Reset puzzle
+                </button>
               </div>
 
-              <p class="chess-copy">
-                Drag the knight to finish the position. Get it right and I’ll show
-                you where to challenge me.
+              <p class="chess-copy"> Get it right and I’ll point
+                you straight to my Lichess profile.
               </p>
 
-              <div class="chess-board-wrap">
-                <div class="board-files">
-                  <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+              <div class="chess-shell">
+                <div class="board-ranks" aria-hidden="true">
+                  <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
                 </div>
-                <div id="chess-board" class="chess-board" aria-label="Chess puzzle board" data-testid="chess-board"></div>
+                <div class="chess-board-wrap">
+                  <div id="chess-board" class="chess-board" aria-label="Chess puzzle board" data-testid="chess-board"></div>
+                  <div class="board-files" aria-hidden="true">
+                    <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+                  </div>
+                </div>
               </div>
 
               <p id="chess-status" class="chess-status">
-                Hint: the final move is a knight capture.
+                Hint: It's a queen move.
               </p>
 
-              <div id="chess-success" class="chess-success hidden">
-                <p>You found <strong>Nf7#</strong>. Good. Let’s play a real one.</p>
-                <a href="https://lichess.org/@/surru" target="_blank" rel="noreferrer"
-                  >Challenge @surru on Lichess</a
-                >
+              <div class="chess-success-slot">
+                <div id="chess-success" class="chess-success hidden">
+                  <p>You found <strong>Qxh7#</strong>. Good. Let’s play a real one.</p>
+                  <a href="https://lichess.org/@/surru" target="_blank" rel="noreferrer"
+                    >Challenge @surru on Lichess</a
+                  >
+                </div>
               </div>
+
+              <div id="chess-confetti" class="confetti-layer" aria-hidden="true"></div>
             </article>
 
             <article class="map-card interactive-shell reveal" id="nearby" data-testid="section-nearby">
@@ -564,9 +690,9 @@
                 <p class="eyebrow">Nearby</p>
                 <h3>Around Brookefield? Hit me up.</h3>
                 <p>
-                  AECS Layout, Brookefield, Bengaluru, Karnataka. If
-                  you’re nearby and want to talk tech, design, travel, or roles,
-                  that is a perfectly valid reason to reach out.
+                  AECS Layout, Brookefield, Bengaluru, Karnataka. If you are nearby
+                  and want to talk tech, design, travel, or roles, that is a
+                  perfectly valid reason to reach out.
                 </p>
                 <a
                   class="ghost-button map-link"
@@ -589,40 +715,61 @@
         </section>
 
         <section class="section contact-section reveal" id="contact" data-testid="section-contact">
-          <p class="eyebrow">Contact Me</p>
-          <h2>Looking for an SDE who can ship across the stack and still feel human?</h2>
-          <p class="contact-text">
-            I’m open to software engineering opportunities where product quality,
-            ownership, and technical depth all matter.
-          </p>
-          <div class="hero-actions contact-actions">
-            <a
-              class="button button-primary"
-              href="mailto:verma.shaurya2003@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              data-testid="btn-email-contact"
-              >Email Me</a
-            >
-            <a
-              class="button button-secondary"
-              href="https://www.linkedin.com/in/verma-shaurya/"
-              target="_blank"
-              rel="noreferrer"
-              data-testid="btn-linkedin"
-              >LinkedIn</a
-            >
-            <a
-              class="button button-secondary"
-              href="https://github.com/vermashaurya"
-              target="_blank"
-              rel="noreferrer"
-              data-testid="btn-github"
-              >GitHub</a
-            >
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <p class="eyebrow">Contact Me</p>
+              <h2>Looking for an SWE who can ship and still care about presentation? Let’s talk.</h2>
+              <p class="contact-text">
+                I am open to software engineering opportunities where product quality,
+                technical depth, and ownership still mean something. If your team
+                wants clean implementation without dead UI, this is probably the
+                right inbox to test.
+              </p>
+            </div>
+
+            <div class="contact-panel">
+              <div class="contact-stack">
+                <p class="card-kicker">Best channels</p>
+                <a
+                  class="button button-primary"
+                  href="mailto:verma.shaurya2003@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-testid="btn-email-contact"
+                  >Email Me</a
+                >
+                <a
+                  class="button button-secondary"
+                  href="https://www.linkedin.com/in/verma-shaurya/"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-testid="btn-linkedin"
+                  >LinkedIn</a
+                >
+                <a
+                  class="button button-secondary"
+                  href="https://github.com/vermashaurya"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-testid="btn-github"
+                  >GitHub</a
+                >
+              </div>
+              <div class="contact-note">
+                <strong>Currently based in Bengaluru.</strong>
+                <span>Open to collaboration, roles, design-led engineering work, and interesting product problems.</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <p>Shaurya Verma</p>
+        <div class="footer-links">
+          <a href="#top">↑ Back to top</a>
+        </div>
+      </footer>
     </div>
 
     <script src="script.js"></script>
