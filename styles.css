@@ -205,50 +205,6 @@ iframe {
   transition: top 180ms ease-out, left 180ms ease-out;
 }
 
-.site-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 40;
-  display: grid;
-  place-items: center;
-  gap: 1rem;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(245, 163, 92, 0.16), transparent 24%),
-    linear-gradient(180deg, rgba(20, 14, 11, 0.98), rgba(20, 14, 11, 0.98));
-  text-align: center;
-  transition:
-    opacity 700ms ease,
-    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
-    visibility 0ms linear 700ms;
-}
-
-.site-loader-mark {
-  display: grid;
-  place-items: center;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-}
-
-.site-loader p {
-  max-width: 28rem;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.92rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-body.site-ready .site-loader {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-}
 
 .site-header,
 .section,
