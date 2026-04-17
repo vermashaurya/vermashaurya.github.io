@@ -932,12 +932,17 @@ h3 {
 }
 
 .tag-row span,
-.chip-group span,
-.certification-row a {
+.chip-group span {
   padding: 0.74rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+.certification-row a {
+  padding: 0.74rem 0.95rem;
+  background: rgba(48, 36, 22, 0.825);
+  border-radius: 12px;
   color: var(--text);
 }
 
