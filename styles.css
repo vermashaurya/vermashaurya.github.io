@@ -1763,9 +1763,6 @@ body.site-ready .hero-stage {
     display: flex;
     margin-top: -1.2rem;
   }
-  .site-footer {
-    margin-bottom: 0;
-  }
 
   .brand {
     grid-area: brand;
