@@ -239,10 +239,6 @@ const updateChrome = () => {
     sideNav.classList.toggle("is-visible", !isMobile && currentScrollY > window.innerHeight * 0.45);
   }
 
-  if (currentScrollY < 180) {
-    setSectionLinkState("top");
-  }
-
   lastScrollY = currentScrollY;
 };
 
