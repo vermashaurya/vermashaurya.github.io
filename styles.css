@@ -1579,8 +1579,21 @@ h3 {
   filter: invert(1);
 }
 
+.contact-panel .button-primary {
+  font-size: 17px;
+}
+
+.contact-panel .button-primary img {
+  width: 21px;
+  height: 21px;
+}
+
 [data-theme="light"] .contact-stack .button img {
   filter: invert(0);
+}
+
+[data-theme="light"] .contact-stack .button-primary img {
+  filter: invert(1);
 }
 
 .contact-note {
