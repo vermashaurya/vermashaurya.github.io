@@ -40,11 +40,6 @@ const setTheme = (theme) => {
 const savedTheme = window.localStorage.getItem("portfolio-theme");
 setTheme(savedTheme || "dark");
 
-window.addEventListener("load", () => {
-  window.requestAnimationFrame(() => {
-    body.classList.add("site-ready");
-  });
-});
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
