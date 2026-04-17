@@ -1886,7 +1886,11 @@ body.site-ready .hero-stage {
   }
 
   .profile-panel {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+
+  .profile-toggle {
+    display: none;
   }
 
   .side-nav {
