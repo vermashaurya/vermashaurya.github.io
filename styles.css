@@ -569,6 +569,7 @@ html[data-theme="light"] .theme-toggle-thumb {
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transition: font-size 240ms ease, font-weight 240ms ease, letter-spacing 240ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .side-nav a::before {
@@ -583,6 +584,9 @@ html[data-theme="light"] .theme-toggle-thumb {
 .side-nav a.is-active {
   color: var(--text);
   transform: translateX(0.15rem);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .side-nav a.is-active::before {
