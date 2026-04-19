@@ -1161,6 +1161,14 @@ h3 {
   font-size: 1.75rem;
 }
 
+.experience-leadership-group {
+  display: contents;
+}
+
+.experience-leadership-label {
+  display: none;
+}
+
 .experience-topline {
   display: flex;
   justify-content: space-between;
@@ -1993,15 +2001,96 @@ body.site-ready .hero-stage {
   }
 
   .hero-notes,
-  .identity-grid,
   .experience-list,
-  .project-grid,
-  .skills-layout {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
+  .experience-leadership-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 / -1;
+    gap: 1.2rem;
+    position: relative;
+    padding-top: 3rem;
+  }
+
+  .experience-card-minor:first-of-type li:first-child {
+    display: none;
+  }
+
+  .experience-card-minor:last-of-type li:last-child {
+    display: none;
+  }
+
+  .experience-leadership-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted-strong);
+  }
+
+  .experience-card-minor h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-card-minor .experience-topline {
+    font-size: 0.78rem;
+  }
+
+  .experience-card-minor ul {
+    font-size: 0.92rem;
+  }
+
+  .identity-grid,
+  .skills-layout,
   .hobby-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .identity-card {
+    min-height: 18rem;
+  }
+
+  .identity-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .identity-card-copy {
+    padding: 0.9rem 0.9rem 0.85rem;
+    gap: 0.3rem;
+  }
+
+  .identity-card p:last-child {
+    font-size: 0.82rem;
+  }
+
+  .skills-card {
+    padding: 1rem;
+  }
+
+  .skills-card h3 {
+    margin-bottom: 1.55rem;
+    font-size: 1.1rem;
+  }
+
+  .chip-group span {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .certification-block {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-copy p:last-child,
+  .certification-row a {
+    font-size: 0.88rem;
   }
 
   .hobby-card {
