@@ -70,29 +70,31 @@ const setSectionLinkState = (activeId) => {
 
 setSectionLinkState("top");
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+const sectionIds = ["experience", "projects", "skills", "hobbies", "contact"];
 
-      const { id } = entry.target;
+const updateActiveSection = () => {
+  const scrollY = window.scrollY;
+  const headerOffset = 116;
 
-      if (id === "experience" || id === "projects" || id === "skills" || id === "hobbies" || id === "contact") {
-        setSectionLinkState(id);
-      }
-    });
-  },
-  {
-    threshold: 0.3,
-    rootMargin: "-35% 0px -45% 0px",
+  for (const id of sectionIds) {
+    const section = document.getElementById(id);
+    if (!section) continue;
+
+    const sectionTop = section.offsetTop - headerOffset - 100;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (scrollY >= sectionTop && scrollY < sectionBottom) {
+      setSectionLinkState(id);
+      return;
+    }
   }
-);
 
-document.querySelectorAll("section[id]").forEach((section) => {
-  sectionObserver.observe(section);
-});
+  if (scrollY < 300) {
+    setSectionLinkState("top");
+  }
+};
+
+updateActiveSection();
 
 const closeProfilePanel = () => {
   if (!profilePanel || !header) {
@@ -244,6 +246,7 @@ const updateChrome = () => {
 
 const handleScrollEffects = () => {
   updateChrome();
+  updateActiveSection();
   scrollFrame = false;
 };
 
