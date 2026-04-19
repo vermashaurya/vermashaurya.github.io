@@ -826,6 +826,20 @@ h3 {
   border-color: var(--line-strong);
 }
 
+.hero-favicon {
+  display: none;
+  justify-content: center;
+  margin: 2.5rem 0 0.5rem;
+}
+
+.hero-favicon img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  box-shadow: 0 0 0 6px rgba(245, 163, 92, 0.12);
+}
+
 .hero-stage {
   perspective: 1600px;
 }
@@ -1932,31 +1946,13 @@ body.site-ready .hero-stage {
     font-size: clamp(3rem, 13vw, 4.8rem);
   }
 
-  .portrait-orbit {
-    min-height: auto;
+  .hero-stage {
+    display: none;
   }
 
-  .portrait-card,
-  .shipping-note,
-  .floating-note {
-    position: relative;
-    inset: auto;
-    width: auto;
+  .hero-favicon {
+    display: flex;
   }
-
-  .portrait-card {
-    min-height: 32rem;
-  }
-
-  .portrait-frame {
-    inset: 1rem 1rem 8.2rem;
-  }
-
-  .shipping-note,
-  .floating-note {
-    margin-top: 1rem;
-  }
-
   .identity-grid,
   .hobby-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
