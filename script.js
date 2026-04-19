@@ -163,22 +163,25 @@ siteNavLinks.forEach((link) => {
   });
 });
 
-pokeButton?.addEventListener("click", () => {
+pokeButton?.addEventListener("click", async () => {
   const visitorName = pokeNameInput?.value.trim();
-  const subject = visitorName ? `Portfolio poke from ${visitorName}` : "Portfolio poke";
-  const bodyLines = [
-    "Hey Shaurya,",
-    "",
-    visitorName
-      ? `${visitorName} viewed your website and left you a poke.`
-      : "Someone viewed your website and left you a poke.",
-    "",
-    "Sent from your portfolio popover.",
-  ];
 
-  window.location.href =
-    `mailto:verma.shaurya2003@gmail.com?subject=${encodeURIComponent(subject)}` +
-    `&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+  closeProfilePanel();
+
+  await fetch("https://formspree.io/f/xvzdqzwk", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+    body: JSON.stringify({
+      name: visitorName || "Anonymous",
+      message: visitorName ? `${visitorName} poked you from your portfolio.` : "Someone poked you from your portfolio.",
+    }),
+  });
+
+  const toast = document.createElement("div");
+  toast.textContent = "Successfully poked! 👋";
+  toast.style.cssText = "position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#f5a35c,#ff6e54);color:#130d0a;font-weight:700;padding:0.85rem 1.6rem;border-radius:999px;z-index:999;box-shadow:0 18px 34px rgba(245,163,92,0.28);transition:opacity 400ms ease;";
+  document.body.appendChild(toast);
+  setTimeout(() => { toast.style.opacity = "0"; setTimeout(() => toast.remove(), 400); }, 2000);
 });
 
 const updatePointer = () => {
