@@ -10,7 +10,7 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 ## Stack
 
-Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step.
+Built with vanilla HTML, CSS, and JavaScript
 
 | Layer | Detail |
 |---|---|
@@ -28,11 +28,11 @@ Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step.
 ## Features
 
 - **Dark / Light theme** — persisted via localStorage
-- **Interactive chess puzzle** — mate in one, with confetti on solve
 - **Poke feature** — silent form submission via Formspree, no page redirect
 - **Cursor glow + tilt effects** — pointer-aware interactions on cards
 - **Side navigation** — scroll-aware active state, visible on wide screens
 - **Fully responsive** — optimised layouts from mobile to ultrawide
+- **Interactive chess puzzle** — mate in one, with confetti on solve
 - **CI pipeline** — Playwright tests run on every push via GitHub Actions
 
 ---
@@ -71,7 +71,7 @@ npx serve .
 
 ## Tests
 
-End-to-end UI tests written with [Playwright](https://playwright.dev), covering navigation, section visibility, chess board, contact links, and resume download.
+End-to-end UI tests written with [Playwright](https://playwright.dev), covering navigation, section visibility, contact links, and resume download.
 
 ```bash
 npm install
@@ -84,4 +84,4 @@ CI runs automatically on every push via `.github/workflows/playwright.yml`.
 
 ## License
 
-Personal portfolio — not intended as a template. Feel free to take inspiration, but please don't copy content or design directly.
+Feel free to take inspiration. <br>Happy Coding!
