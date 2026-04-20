@@ -429,6 +429,10 @@ html[data-theme="light"] .theme-toggle-thumb {
   transform: translateX(1.25rem);
 }
 
+html[data-theme="light"] .theme-toggle-track {
+  background: rgba(34, 20, 12, 0.88);
+}
+
 .theme-toggle-copy {
   font-size: 0.86rem;
   color: var(--muted);
@@ -1791,6 +1795,17 @@ body.site-ready .hero-stage {
   100% {
     transform: translate3d(var(--confetti-x), 120%, 0) rotate(var(--confetti-rotate));
     opacity: 0;
+  }
+}
+
+@media (max-width: 1599px) {
+  .theme-toggle-floating {
+    top: auto;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .side-nav {
+    display: none;
   }
 }
 
