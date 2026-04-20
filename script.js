@@ -168,7 +168,7 @@ pokeButton?.addEventListener("click", async () => {
 
   closeProfilePanel();
 
-  await fetch("https://formspree.io/f/xvzdqzwk", {
+  await fetch("https://formspree.io/f/xvzdqlza", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Accept": "application/json" },
     body: JSON.stringify({
