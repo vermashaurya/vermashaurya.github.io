@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/github", "destination": "https://github.com/vermashaurya", "permanent": false },
+    { "source": "/linkedin", "destination": "https://linkedin.com/in/verma-shaurya", "permanent": false },
+    { "source": "/resume", "destination": "/assets/shaurya-verma-resume.pdf", "permanent": false }
+  ]
+}
