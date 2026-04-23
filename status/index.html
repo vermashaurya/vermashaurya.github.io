@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Status • Shaurya Verma</title>
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    .note-pill:hover {
+      border-color: var(--line-strong);
+      transform: translateY(-2px);
+    }
+
+    .status-region {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .status-badge {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .button-secondary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #000;
+      border: none;
+    }
+
+    .button-secondary:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 0 0 var(--accent-3);
+      }
+      70% {
+        transform: scale(1.2);
+        opacity: 0.7;
+        box-shadow: 0 0 0 8px rgba(0,0,0,0);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(0,0,0,0);
+      }
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+      background: linear-gradient(135deg, var(--accent-3), var(--accent));
+      box-shadow: 0 0 12px var(--accent-3);
+      animation: pulse 2.5s infinite ease-out;
+      vertical-align: middle;
+    }
+
+    .note-pill strong {
+      display: inline-flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body class="site-ready">
+
+  <div class="noise-layer"></div>
+  <div class="grid-mesh"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+
+  <main class="section" style="display:flex; align-items:center; justify-content:center; min-height:100vh;">
+    
+    <div class="contact-section reveal is-visible" style="max-width:520px; width:100%; text-align:center;">
+      
+      <p class="eyebrow">System Status</p>
+
+      <h2 style="margin-bottom:1rem;">All systems operational</h2>
+
+      <p class="contact-text">
+        Monitoring uptime and performance across all regions.
+      </p>
+
+      <div class="note-pill" style="margin-top:1.5rem;">
+        <strong>
+          <span class="status-dot"></span>
+          Operational
+        </strong>
+        <span id="time"></span>
+        <span class="status-region">Asia • Primary monitor</span>
+      </div>
+
+      <div class="status-badge">
+        <img src="https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?style=for-the-badge&label=uptime" />
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a href="/" class="button button-secondary">← Back to portfolio</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    document.getElementById("time").textContent =
+      "Last updated: " + new Date().toLocaleString();
+  </script>
+
+</body>
+</html>

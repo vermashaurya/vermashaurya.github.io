@@ -4,6 +4,9 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 **Live at:** [shaurya.online](https://shaurya.online)
 
+![Uptime](https://img.shields.io/uptimerobot/status/m802907586-cd0c75503b185949c25b62b2?label=Status)
+![Uptime](https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?label=Uptime)
+
 <img src="assets/preview.avif" alt="PageSpeed Insights Score" width="600" />
 
 ![Tests](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml/badge.svg) 
@@ -23,6 +26,7 @@ Built with vanilla HTML, CSS, and JavaScript
 | Performance | Audited with Google Lighthouse — 90+ across all categories |
 | Testing | Playwright end-to-end via GitHub Actions CI |
 | Hosting | GitHub Pages + Vercel + Custom domain via [shaurya.online](https://shaurya.online) |
+| Monitoring | UptimeRobot (multi-region: Asia + US), status page, uptime API badge |
 
 ---
 
@@ -80,9 +84,22 @@ npx serve .
 ## Performance
 
 <img src="assets/PageSpeed-Insights.avif" alt="PageSpeed Insights Score" width="600" />
+Google Lighthouse: 
 
-Google Lighthouse scores: <br>
-Performance 99 · Accessibility 98 · Best Practices 100 · SEO 100
+![Performance](https://img.shields.io/badge/Performance-99-brightgreen)
+![Accessibility](https://img.shields.io/badge/Accessibility-98-brightgreen)
+![Best Practices](https://img.shields.io/badge/BestPractices-100-brightgreen)
+![SEO](https://img.shields.io/badge/SEO-100-brightgreen)
+<!-- Performance 99 · Accessibility 98 · Best Practices 100 · SEO 100 --> 
+---
+## Monitoring
+
+- **Uptime Monitoring** — Tracked via UptimeRobot (Asia + US regions)
+- **Real-time Alerts** — Email and push notifications enabled
+- **Status Page** — [/status](https://shaurya.online/status)
+- **Performance Monitoring** — Vercel Speed Insights (real user metrics)
+
+Primary monitoring on Asia region for majority user experience, with a secondary US monitor for global availability checks.
 
 ---
 
