@@ -7,7 +7,7 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 ![Uptime](https://img.shields.io/uptimerobot/status/m802907586-cd0c75503b185949c25b62b2?label=Status)
 ![Uptime](https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?label=Uptime)
 
-<img src="assets/preview.avif" alt="PageSpeed Insights Score" width="600" />
+<img src="assets/preview.avif" alt="Preview Image" width="600" />
 
 ![Tests](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml/badge.svg) 
 ---
