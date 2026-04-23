@@ -4,8 +4,9 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 **Live at:** [shaurya.online](https://shaurya.online)
 
-![Tests](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml/badge.svg)
+<img src="assets/preview.avif" alt="PageSpeed Insights Score" width="600" />
 
+![Tests](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml/badge.svg) 
 ---
 
 ## Stack
@@ -34,6 +35,13 @@ Built with vanilla HTML, CSS, and JavaScript
 - **Fully responsive** — optimised layouts from mobile to ultrawide
 - **Interactive chess puzzle** — mate in one, with confetti on solve
 - **CI pipeline** — Playwright tests run on every push via GitHub Actions
+
+---
+
+## Color Palette
+
+![#140e0b](https://dummyimage.com/40x20/140e0b/000000?text=+) ![#1e1511](https://dummyimage.com/40x20/1e1511/000000?text=+) ![#f8efe6](https://dummyimage.com/40x20/f8efe6/000000?text=+) ![#d4c1b0](https://dummyimage.com/40x20/d4c1b0/000000?text=+) ![#f5a35c](https://dummyimage.com/40x20/f5a35c/000000?text=+) ![#ff6e54](https://dummyimage.com/40x20/ff6e54/000000?text=+) ![#91dbc0](https://dummyimage.com/40x20/91dbc0/000000?text=+)  
+`#140e0b` `#1e1511` `#f8efe6` `#d4c1b0` `#f5a35c` `#ff6e54` `#91dbc0`
 
 ---
 
@@ -69,6 +77,15 @@ npx serve .
 
 ---
 
+## Performance
+
+<img src="assets/PageSpeed-Insights.avif" alt="PageSpeed Insights Score" width="600" />
+
+Google Lighthouse scores: <br>
+Performance 99 · Accessibility 98 · Best Practices 100 · SEO 100
+
+---
+
 ## Tests
 
 End-to-end UI tests written with [Playwright](https://playwright.dev), covering navigation, section visibility, contact links, and resume download.
@@ -84,4 +101,8 @@ CI runs automatically on every push via `.github/workflows/playwright.yml`.
 
 ## License
 
+This project is licensed under the [MIT License](LICENSE). 
+<br><br>
+<img src="assets/favicon.avif" alt="Logo" width="120" /> <br>
+![License](https://img.shields.io/github/license/vermashaurya/vermashaurya.github.io) <br>
 Feel free to take inspiration. <br>Happy Coding!
