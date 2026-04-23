@@ -121,5 +121,5 @@ CI runs automatically on every push via `.github/workflows/playwright.yml`.
 This project is licensed under the [MIT License](LICENSE). 
 <br><br>
 <img src="assets/favicon.avif" alt="Logo" width="120" /> <br>
-![License](https://img.shields.io/github/license/vermashaurya/vermashaurya.github.io) <br>
+[![License](https://img.shields.io/github/license/vermashaurya/vermashaurya.github.io)](LICENSE) [![Security](https://img.shields.io/badge/Security-Policy-blue)](SECURITY.md)<br>
 Feel free to take inspiration. <br>Happy Coding!
