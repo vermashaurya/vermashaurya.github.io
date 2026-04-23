@@ -229,11 +229,13 @@ const updateChrome = () => {
   const currentScrollY = window.scrollY;
   const isCompact = currentScrollY > 8;
   const isMobile = window.innerWidth <= 820;
+  const navIsOpen = header?.classList.contains("is-nav-open");
+  const profileIsOpen = header?.classList.contains("is-profile-open");
 
   if (header) {
     header.classList.toggle("is-compact", isCompact);
 
-    if (isMobile || currentScrollY < 110 || currentScrollY < lastScrollY - 2) {
+    if (navIsOpen || profileIsOpen || currentScrollY < 110 || currentScrollY < lastScrollY - 2) {
       header.classList.remove("is-hidden");
     } else if (currentScrollY > lastScrollY + 2) {
       header.classList.add("is-hidden");
