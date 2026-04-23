@@ -235,7 +235,7 @@ iframe {
 }
 
 .site-header.is-hidden {
-  transform: translate(-50%, -160%);
+  transform: translate(-50%, calc(-100% - 2rem));
   opacity: 0;
 }
 
@@ -2136,6 +2136,7 @@ body.site-ready .hero-stage {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 6rem;
   }
 
   .chess-shell {
@@ -2217,6 +2218,24 @@ body.site-ready .hero-stage {
 @media (hover: none), (pointer: coarse) {
   .cursor-glow {
     display: none;
+  }
+
+  .project-card ul {
+    margin-bottom: 0;
+  }
+
+  .project-link {
+    position: static;
+    justify-self: end;
+    text-align: right;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    opacity: 1;
+    transform: none;
+  }
+
+  .project-link::after {
+    transform: scaleX(1);
   }
 
   .interactive-shell:hover,
