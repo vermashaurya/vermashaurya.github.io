@@ -41,6 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Playfair+Display:wght@500;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="assets/favicon.avif" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   </head>
@@ -64,7 +65,14 @@
             data-profile-toggle
           >
             <span class="brand-avatar">
-              <img src="assets/favicon.avif" alt="Shaurya Verma profile photo" />
+              <img
+                src="assets/favicon.avif"
+                alt="Shaurya Verma profile photo"
+                width="52"
+                height="52"
+                fetchpriority="high"
+                decoding="async"
+              />
             </span>
             <span class="brand-copy">
               <strong>Shaurya Verma</strong>
@@ -107,7 +115,12 @@
 
         <section class="profile-panel" id="profile-panel" hidden>
           <div class="profile-panel-media">
-            <img src="assets/pfp.avif" alt="Large portrait of Shaurya Verma" />
+            <img
+              src="assets/pfp.avif"
+              alt="Large portrait of Shaurya Verma"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="profile-panel-copy">
             <p class="eyebrow">Quick hello</p>
@@ -161,7 +174,7 @@
 
       <main id="top">
         <section class="hero section">
-          <div class="hero-copy reveal">
+          <div class="hero-copy">
             <p class="eyebrow">Senior Software Engineer at Capgemini</p>
             <h1>Readable products, reliable systems, and a little personality.</h1>
             <p class="hero-text">
@@ -194,7 +207,13 @@
             </div>
 
             <div class="hero-favicon">
-            <img src="assets/favicon.avif" alt="Shaurya Verma" />
+            <img
+              src="assets/favicon.avif"
+              alt="Shaurya Verma"
+              width="240"
+              height="240"
+              decoding="async"
+            />
           </div>
 
           <div class="hero-notes">
@@ -213,11 +232,15 @@
             </div>
           </div>
 
-          <div class="hero-stage reveal">
+          <div class="hero-stage">
             <div class="portrait-orbit" data-tilt>
               <article class="portrait-card interactive-shell">
                 <div class="portrait-frame">
-                  <img src="assets/self-img.avif" alt="Shaurya Verma standing portrait" />
+                  <img
+                    src="assets/self-img.avif"
+                    alt="Shaurya Verma standing portrait"
+                    decoding="async"
+                  />
                 </div>
               </article>
 
