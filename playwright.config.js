@@ -13,7 +13,7 @@ export default defineConfig({
   },
 
   use: {
-    baseURL: 'https://vermashaurya.github.io',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'https://vermashaurya.github.io',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
