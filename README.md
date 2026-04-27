@@ -4,8 +4,8 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 **Live at:** [shaurya.online](https://shaurya.online)
 
-![Uptime](https://img.shields.io/uptimerobot/status/m802907586-cd0c75503b185949c25b62b2?label=Status)
-![Uptime](https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?label=Uptime)
+[![Uptime](https://img.shields.io/uptimerobot/status/m802907586-cd0c75503b185949c25b62b2?label=Status)](https://shaurya.online/status)
+[![Uptime](https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?label=Uptime)](https://stats.uptimerobot.com/Xi4UYrORLw)
 
 <img src="assets/preview.avif" alt="Preview Image" width="600" />
 
@@ -96,7 +96,7 @@ Google Lighthouse:
 
 - **Uptime Monitoring** — Tracked via UptimeRobot (Asia + US regions)
 - **Real-time Alerts** — Email and push notifications enabled
-- **Status Page** — [/status](https://shaurya.online/status)
+- **Status Page** — [/status](https://shaurya.online/status) for an overview, or [Check Status](https://stats.uptimerobot.com/Xi4UYrORLw) for a detailed report
 - **Performance Monitoring** — Vercel Speed Insights (real user metrics)
 
 Primary monitoring on Asia region for majority user experience, with a secondary US monitor for global availability checks.
