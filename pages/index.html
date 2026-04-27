@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A compact index of Shaurya Verma's live websites, experiments, and shipped interfaces."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#140e0b" />
+    <meta property="og:title" content="Pages | Shaurya Verma" />
+    <meta
+      property="og:description"
+      content="Browse live websites, experiments, and shipped builds from Shaurya Verma."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shaurya.online/pages/" />
+    <link rel="canonical" href="https://shaurya.online/pages/" />
+    <title>Pages • Shaurya Verma</title>
+    <link rel="icon" type="image/avif" href="/assets/favicon.avif" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/pages/styles.css" />
+    <script defer src="/pages/script.js"></script>
+  </head>
+  <body>
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="grid-mesh" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="ambient ambient-three" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="back-link" href="/" aria-label="Back to portfolio home">
+          <span class="back-link-mark">/</span>
+          <span>Portfolio</span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle color theme"
+          data-theme-toggle
+        >
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-copy">Light</span>
+        </button>
+      </header>
+
+      <section class="intro-block">
+        <p class="eyebrow">Live Pages</p>
+        <div class="intro-copy">
+          <div>
+            <h1>Sites currently online.</h1>
+            <p class="intro-text">
+              A compact index of public builds, experiments, tools, and deployed ideas.
+              Everything here is live and ready to open.
+            </p>
+          </div>
+
+          <div class="intro-meta" aria-label="Summary">
+            <div class="meta-pill">
+              <strong data-site-total>8</strong>
+              <span>live entries</span>
+            </div>
+            <div class="meta-pill">
+              <strong>Mobile first</strong>
+              <span>built for quick browsing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="pages-grid"
+        data-pages-grid
+        data-testid="pages-grid"
+        aria-label="Live website directory"
+      ></section>
+
+      <footer class="page-footer">
+        <p>More projects will land here over time.</p>
+        <a href="/">Return to shaurya.online</a>
+      </footer>
+    </main>
+  </body>
+</html>
