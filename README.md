@@ -9,7 +9,8 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 <img src="assets/preview.avif" alt="Preview Image" width="600" />
 
-![Tests](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml/badge.svg) 
+[![Tests](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml/badge.svg)](https://github.com/vermashaurya/vermashaurya.github.io/actions/workflows/playwright.yml)
+
 ---
 
 ## Stack
