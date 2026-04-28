@@ -4,8 +4,8 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 **Live at:** [shaurya.online](https://shaurya.online)
 
-[![Uptime](https://img.shields.io/uptimerobot/status/m802907586-cd0c75503b185949c25b62b2?label=Status)](https://shaurya.online/status)
-[![Uptime](https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?label=Uptime)](https://stats.uptimerobot.com/Xi4UYrORLw)
+[![Uptime](https://img.shields.io/uptimerobot/status/m802907586-cd0c75503b185949c25b62b2?label=Status)](https://shaurya.online/status) 
+[![Uptime](https://img.shields.io/uptimerobot/ratio/m802907586-cd0c75503b185949c25b62b2?label=Uptime)](https://shaurya.betteruptime.com/) 
 
 <img src="assets/preview.avif" alt="Preview Image" width="600" />
 
@@ -21,13 +21,13 @@ Built with vanilla HTML, CSS, and JavaScript
 |---|---|
 | Markup | Semantic HTML5 |
 | Styling | Custom CSS with CSS variables, responsive grid, dark/light theme |
-| Scripting | Vanilla JS — scroll effects, chess puzzle, theme toggle, poke feature |
+| Scripting | Vanilla JS — scroll effects, mini game, theme toggle, poke feature |
 | Fonts | Playfair Display (headings) · Schibsted Grotesk (body) |
 | Images | Compressed and converted to AVIF via [Squoosh](https://squoosh.app) |
 | Performance | Audited with Google Lighthouse — 90+ across all categories |
 | Testing | Playwright end-to-end via GitHub Actions CI |
 | Hosting | GitHub Pages + Vercel + Custom domain via [shaurya.online](https://shaurya.online) |
-| Monitoring | UptimeRobot (multi-region: Asia + US), status page, uptime API badge |
+| Monitoring | BetterStack, [Status page](https://shaurya.betteruptime.com), UptimeRobot (multi-region: Asia + US) |
 
 ---
 
@@ -38,7 +38,7 @@ Built with vanilla HTML, CSS, and JavaScript
 - **Cursor glow + tilt effects** — pointer-aware interactions on cards
 - **Side navigation** — scroll-aware active state, visible on wide screens
 - **Fully responsive** — optimised layouts from mobile to ultrawide
-- **Interactive chess puzzle** — mate in one, with confetti on solve
+- **Interactive mini game** — checkmate in one, with confetti on solving
 - **CI pipeline** — Playwright tests run on every push via GitHub Actions
 
 ---
@@ -93,14 +93,15 @@ Google Lighthouse:
 ![SEO](https://img.shields.io/badge/SEO-100-brightgreen)
 <!-- Performance 99 · Accessibility 98 · Best Practices 100 · SEO 100 --> 
 ---
-## Monitoring
+## Monitoring 
 
-- **Uptime Monitoring** — Tracked via UptimeRobot (Asia + US regions)
+- **Incident Reports** — Tracked via BetterStack (SF + Mumbai + UK + Syd) & UptimeRobot (Asia + US regions)
 - **Real-time Alerts** — Email and push notifications enabled
-- **Status Page** — [/status](https://shaurya.online/status) for an overview, or [Check Status](https://stats.uptimerobot.com/Xi4UYrORLw) for a detailed report
+- **Status Page** — [/status](https://shaurya.online/status) for an overview, or [Check Status](https://shaurya.betteruptime.com/) for a detailed report
 - **Performance Monitoring** — Vercel Speed Insights (real user metrics)
 
-Primary monitoring on Asia region for majority user experience, with a secondary US monitor for global availability checks.
+Primary monitoring on Asia region with secondary US, UK, EU & AU monitors for global availability checks.
+<!-- [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v3/monitor/2kv5f.svg)](https://shaurya.betteruptime.com/) -->
 
 ---
 
