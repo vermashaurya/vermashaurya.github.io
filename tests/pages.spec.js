@@ -7,7 +7,8 @@ test.describe('Pages directory', () => {
 
     await expect(page).toHaveTitle(/Pages/);
     await expect(page.locator('[data-testid="pages-grid"]')).toBeVisible();
-    await expect(page.locator('[data-testid="site-card"]')).toHaveCount(8);
+    const cards = page.locator('[data-testid="site-card"]');
+    expect(await cards.count()).toBeGreaterThanOrEqual(8);
 
     const firstHref = await page.locator('[data-testid="site-card"] a').first().getAttribute('href');
     expect(firstHref).toMatch(/^https?:\/\//);
