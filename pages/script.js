@@ -9,14 +9,24 @@ let lastScrollY = window.scrollY;
 // Add new live entries here. The grid renders directly from this list.
 const sites = [
   {
-    name: "AI Math Logic",
-    url: "https://vermashaurya.github.io/ai-math-logic",
-    domain: "vermashaurya.github.io/ai-math-logic",
-    description: "Math-driven AI playground with logic-first interaction and clean problem flow.",
+    name: "ML-Keras Bot",
+    url: "https://vermashaurya.github.io/ML-Keras-Bot",
+    domain: "vermashaurya.github.io/ML-Keras_bot",
+    description: "Socket programming demo with a Keras-trained model for interactive predictions in a chat-like interface.",
     accent: "amber",
-    tag: "Live",
+    tag: "Robotics",
     note: "GitHub Pages deployment",
     code: "ML"
+  },
+  {
+    name: "OCR Lens",
+    url: "https://vermashaurya.github.io/ocr-lens",
+    domain: "vermashaurya.github.io/ocr-lens",
+    description: "Text extraction utility with a cleaner utility-style surface and focused task flow.",
+    accent: "lime",
+    tag: "Engine",
+    note: "Document capture utility",
+    code: "OCR"
   },
   {
     name: "CNN Health",
@@ -26,7 +36,17 @@ const sites = [
     accent: "mint",
     tag: "Vision",
     note: "CNN experiment online",
-    code: "CV"
+    code: "CNN"
+  },
+  {
+    name: "AI Math Logic",
+    url: "https://vermashaurya.github.io/ai-math-logic",
+    domain: "vermashaurya.github.io/ai-math-logic",
+    description: "Math-driven AI playground with logic-first interaction and clean problem flow.",
+    accent: "sky",
+    tag: "Logic",
+    note: "GitHub Pages deployment",
+    code: "AI"
   },
   {
     name: "Encryption Models",
@@ -43,10 +63,10 @@ const sites = [
     url: "https://vermashaurya.github.io/fcc-websites",
     domain: "vermashaurya.github.io/fcc-websites",
     description: "A collection of Frontend Mentor style practice sites with varied layouts and polish.",
-    accent: "sky",
+    accent: "gold",
     tag: "Stack",
     note: "Multiple responsive pages",
-    code: "FC"
+    code: "WEB"
   },
   {
     name: "Web Engine",
@@ -56,17 +76,7 @@ const sites = [
     accent: "gold",
     tag: "Build",
     note: "Interactive concept online",
-    code: "WE"
-  },
-  {
-    name: "OCR Lens",
-    url: "https://vermashaurya.github.io/ocr-lens",
-    domain: "vermashaurya.github.io/ocr-lens",
-    description: "Text extraction utility with a cleaner utility-style surface and focused task flow.",
-    accent: "lime",
-    tag: "OCR",
-    note: "Document capture utility",
-    code: "OC"
+    code: "PHP"
   },
   {
     name: "Network Communication",
@@ -74,19 +84,19 @@ const sites = [
     domain: "vermashaurya.github.io/network-communication",
     description: "Networking-oriented educational build with diagram-friendly structure and pacing.",
     accent: "rose",
-    tag: "Net",
+    tag: "Comm",
     note: "Protocol concept site",
-    code: "NW"
+    code: "NET"
   },
   {
     name: "MyBookSurru",
     url: "https://mybooksurru.glide.page/",
     domain: "mybooksurru.glide.page",
     description: "A live book-centric product page with a simpler app-like hosted experience.",
-    accent: "teal",
+    accent: "sky",
     tag: "App",
     note: "Hosted outside GitHub Pages",
-    code: "MB"
+    code: "GL"
   }
 ];
 
