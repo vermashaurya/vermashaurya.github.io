@@ -85,13 +85,15 @@ npx serve .
 ## Performance
 
 <img src="assets/PageSpeed-Insights.avif" alt="PageSpeed Insights Score" width="600" />
-Google Lighthouse: 
 
-![Performance](https://img.shields.io/badge/Performance-99-brightgreen)
+**Google Lighthouse:** 
+Performance 99 · Accessibility 98 · Best Practices 100 · SEO 100 
+<!-- ![Performance](https://img.shields.io/badge/Performance-99-brightgreen)
 ![Accessibility](https://img.shields.io/badge/Accessibility-98-brightgreen)
 ![Best Practices](https://img.shields.io/badge/BestPractices-100-brightgreen)
-![SEO](https://img.shields.io/badge/SEO-100-brightgreen)
-<!-- Performance 99 · Accessibility 98 · Best Practices 100 · SEO 100 --> 
+![SEO](https://img.shields.io/badge/SEO-100-brightgreen) -->
+
+
 ---
 ## Monitoring 
 
@@ -121,7 +123,7 @@ CI runs automatically on every push via `.github/workflows/playwright.yml`.
 ## License
 
 This project is licensed under the [MIT License](LICENSE). 
-<br><br>
-<img src="assets/favicon.avif" alt="Logo" width="120" /> <br>
+<br><br> Copyright (c) 2026 <br>
+<img src="assets/name-geo.avif" alt="Logo" width="600"/>  <br> <br>
 [![License](https://img.shields.io/github/license/vermashaurya/vermashaurya.github.io)](LICENSE) [![Security](https://img.shields.io/badge/Security-Policy-blue)](SECURITY.md)<br>
 Feel free to take inspiration. <br>Happy Coding!
