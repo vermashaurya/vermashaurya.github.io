@@ -1,4 +1,4 @@
-# Shaurya Verma — Portfolio
+# Shaurya Verma — Portfolio [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/vermashaurya/vermashaurya.github.io/)
 
 Personal portfolio website. Interactive, professional, and a touch of personality.
 
