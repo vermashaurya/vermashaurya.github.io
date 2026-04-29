@@ -10,6 +10,18 @@
       ]
     }
   ],
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "pages.shaurya.online"
+        }
+      ],
+      "destination": "/pages/:path*"
+    }
+  ],
   "redirects": [
     {
       "source": "/:path*",
@@ -20,6 +32,17 @@
         }
       ],
       "destination": "https://shaurya.online/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/pages/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "shaurya.online"
+        }
+      ],
+      "destination": "https://pages.shaurya.online/:path*",
       "permanent": true
     },
     { "source": "/github", "destination": "https://github.com/vermashaurya", "permanent": false },
