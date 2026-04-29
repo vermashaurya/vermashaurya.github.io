@@ -10,28 +10,6 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "pages.shaurya.online"
-        }
-      ],
-      "destination": "/pages/"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "pages.shaurya.online"
-        }
-      ],
-      "destination": "/pages/:path*"
-    }
-  ],
   "redirects": [
     {
       "source": "/:path*",
@@ -42,6 +20,17 @@
         }
       ],
       "destination": "https://shaurya.online/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/pages",
+      "has": [
+        {
+          "type": "host",
+          "value": "shaurya.online"
+        }
+      ],
+      "destination": "https://pages.shaurya.online",
       "permanent": true
     },
     {
