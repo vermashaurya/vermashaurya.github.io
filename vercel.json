@@ -19,7 +19,7 @@
           "value": "pages.shaurya.online"
         }
       ],
-      "destination": "/pages/index.html"
+      "destination": "/pages/"
     },
     {
       "source": "/:path*",
@@ -33,17 +33,6 @@
     }
   ],
   "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "pages.shaurya.online"
-        }
-      ],
-      "destination": "https://pages.shaurya.online/pages/",
-      "permanent": true
-    },
     {
       "source": "/:path*",
       "has": [
