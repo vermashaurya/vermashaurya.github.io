@@ -12,6 +12,16 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "pages.shaurya.online"
+        }
+      ],
+      "destination": "/pages/index.html"
+    },
+    {
       "source": "/:path*",
       "has": [
         {
