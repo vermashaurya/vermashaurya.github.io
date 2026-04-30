@@ -44,6 +44,28 @@
       "destination": "https://pages.shaurya.online/:path*",
       "permanent": true
     },
+    {
+      "source": "/portfolio",
+      "has": [
+        {
+          "type": "host",
+          "value": "shaurya.online"
+        }
+      ],
+      "destination": "https://portfolio.shaurya.online",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "shaurya.online"
+        }
+      ],
+      "destination": "https://portfolio.shaurya.online/:path*",
+      "permanent": true
+    },
     { "source": "/github", "destination": "https://github.com/vermashaurya", "permanent": false },
     { "source": "/linkedin", "destination": "https://linkedin.com/in/verma-shaurya", "permanent": false },
     { "source": "/resume", "destination": "/assets/shaurya-verma-resume.pdf", "permanent": false }
