@@ -6,15 +6,31 @@
   <meta name="description" content="Shaurya Verma — Senior Software Engineer at Capgemini. Full-stack developer building with Angular, React, .NET, and AI.">
   <meta name="theme-color" content="#0a0a0a">
   
-  <meta property="og:title" content="Shaurya Verma — Software Engineer">
-  <meta property="og:description" content="Senior Software Engineer at Capgemini. Building full-stack experiences with Angular, React, .NET, and AI.">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://shaurya.online/portfolio/">
-  <meta property="og:image" content="https://shaurya.online/assets/self-img.avif">
+  <meta property="og:title" content="Shaurya Verma | Software Engineer">
+  <meta property="og:description" content="Full-stack Developer, AI Engineer, General Enthusiast.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portfolio.shaurya.online/">
+  <meta property="og:image" content="https://shaurya.online/assets/metapreview.avif">
+  <meta property="og:site_name" content="Shaurya Verma" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shaurya Verma",
+      "url": "https://portfolio.shaurya.online",
+      "jobTitle": "Senior Software Engineer",
+      "worksFor": { "@type": "Organization", "name": "Capgemini" },
+      "sameAs": [
+        "https://linkedin.com/in/verma-shaurya",
+        "https://github.com/vermashaurya"
+      ]
+    }
+    </script>
   
   <title>Shaurya Verma — Software Engineer</title>
-  <link rel="icon" type="image/avif" href="../assets/favicon.avif">
-  <link rel="canonical" href="https://shaurya.online/portfolio/">
+  <link rel="icon" type="image/avif" href="https://shaurya.online/favicon.avif">
+  <link rel="canonical" href="https://portfolio.shaurya.online/">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,7 +245,10 @@
         radial-gradient(0.5px 0.5px at 905px 325px, var(--star-color), transparent),
         radial-gradient(0.5px 0.5px at 1005px 405px, var(--star-color), transparent);
       background-size: 1000px 200px;
-      animation: starFloat 30s linear infinite;
+      animation: starFloat 25s linear infinite;
+    }
+    .stars.second {
+      top:100%;
     }
 
     @keyframes starFloat {
@@ -307,6 +326,7 @@
       color: var(--text-primary);
       text-decoration: none;
       letter-spacing: -0.01em;
+      z-index: 998;
     }
     
     .brand:hover {
@@ -317,6 +337,7 @@
       display: flex;
       gap: 16px;
       align-items: center;
+      z-index: 999;
     }
     
     .header-nav a {
@@ -651,6 +672,9 @@
     .stack-icon.java { color: #f89820; }
     .stack-icon.ai { color: #00ff88; }
     .stack-icon.microservices { color: #ff6b6b; }
+    .stack-icon.azure { color: #0078d4; }
+    .stack-icon.scrum { color: #bd0101; }
+    .stack-icon.devops { color: #1e8900; }
     
     .about-list {
       padding: 16px 20px;
@@ -847,7 +871,7 @@
 </head>
 <body>
   <div class="stars"></div>
-
+  <div class="stars second"></div>
   <div class="container">
     <header class="header" id="top">
       <a href="https://shaurya.online" class="brand">shaurya.online</a>
@@ -977,11 +1001,23 @@
           </span>
           <span class="stack-item">
             <i data-lucide="brain-circuit" class="stack-icon ai"></i>
-            RAG / AI
+            RAG
           </span>
           <span class="stack-item">
             <i data-lucide="database" class="stack-icon microservices"></i>
             Microservices
+          </span>
+          <span class="stack-item">
+            <i data-lucide="cloud" class="stack-icon azure"></i>
+            Azure
+          </span>
+          <span class="stack-item">
+            <i data-lucide="container" class="stack-icon devops"></i>
+            DevOps
+          </span>
+          <span class="stack-item">
+            <i data-lucide="users" class="stack-icon scrum"></i>
+            Scrum
           </span>
         </div>
       </div>
@@ -1004,14 +1040,14 @@
           <h2 class="card-title">Explore More</h2>
         </div>
         <div class="explore-grid">
-          <a href="https://pages.shaurya.online/" class="explore-item">
+          <a href="https://pages.shaurya.online/" target="_blank" class="explore-item">
             <span class="explore-name">
               <i data-lucide="layout-grid" style="width: 16px; height: 16px;"></i>
               Pages
             </span>
             <span class="explore-desc">Live sites & experiments</span>
           </a>
-          <a href="https://shaurya.online/status" class="explore-item">
+          <a href="https://shaurya.online/status" target="_blank" class="explore-item">
             <span class="explore-name">
               <i data-lucide="activity" style="width: 16px; height: 16px;"></i>
               Status
@@ -1039,16 +1075,16 @@
     </div>
     
     <footer class="footer" id="contact">
-      <p class="footer-text">© 2026 Shaurya Verma. Built with intention.</p>
+      <p class="footer-text">The nights just aren't tandoori anymore. © 2026 Shaurya Verma.</p>
       <div class="footer-links">
-        <a href="https://shaurya.online">Desktop Site</a>
-        <a href="mailto:shauryaverma.tech@gmail.com" target="_blank">Email</a>
+        <a href="https://shaurya.online"><u>Desktop Site</u></a>
+        <!-- <a href="mailto:shauryaverma.tech@gmail.com" target="_blank">Email</a> -->
       </div>
     </footer>
   </div>
   
   <div class="fab-container">
-    <a href="mailto:shauryaverma.tech@gmail.com" class="fab fab-left" aria-label="Contact">
+    <a href="mailto:shauryaverma.tech@gmail.com" class="fab fab-left" target="_blank" rel="noopener noreferrer" aria-label="Contact">
       <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
     </a>
     <button class="fab" id="backToTop" aria-label="Back to top">
@@ -1061,7 +1097,6 @@
   <script>
     lucide.createIcons();
     
-    // Local time updater
     function updateLocalTime() {
       const now = new Date();
       const timeString = now.toLocaleTimeString('en-US', {
@@ -1074,22 +1109,20 @@
       if (timeEl) timeEl.textContent = timeString + ' IST';
     }
     
+    
     updateLocalTime();
     setInterval(updateLocalTime, 60000);
     
-    // Email copy functionality
     const emailLink = document.getElementById('emailLink');
     const toast = document.getElementById('toast');
     
     if (emailLink) {
       emailLink.addEventListener('click', async (e) => {
-        // On mobile/long press, copy email
         if (navigator.clipboard) {
           try {
             await navigator.clipboard.writeText('shauryaverma.tech@gmail.com');
             showToast('Email copied to clipboard');
           } catch (err) {
-            // Fallback - let the mailto: work
           }
         }
       });
