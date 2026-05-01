@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pages.shaurya.online/sitemap.xml
