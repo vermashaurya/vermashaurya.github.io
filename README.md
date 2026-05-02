@@ -13,6 +13,17 @@ Personal portfolio website. Interactive, professional, and a touch of personalit
 
 ---
 
+## Live Ecosystem
+
+| Service | URL | Focus |
+| :--- | :--- | :--- |
+| **Main Website** | [shaurya.online](https://shaurya.online) | Primary hub & desktop experience |
+| **Mobile Portfolio** | [portfolio.shaurya.online](https://portfolio.shaurya.online) | Tailored for mobile viewing |
+| **Project Archive** | [pages.shaurya.online](https://pages.shaurya.online) | Hosted projects & live demos |
+| **Status Page** | [status.shaurya.online](https://status.shaurya.online) | Real-time uptime monitoring |
+
+--- 
+
 ## Stack
 
 Built with vanilla HTML, CSS, and JavaScript
