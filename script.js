@@ -618,3 +618,41 @@ if (chessBoard && chessStatus && chessSuccess && chessReset) {
   chessReset.addEventListener("click", resetPuzzle);
   resetPuzzle();
 }
+
+const BANNER_DISMISSED_KEY = "mobile-banner-dismissed";
+
+function getBannerDismissed() {
+  try {
+    return sessionStorage.getItem(BANNER_DISMISSED_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function setBannerDismissed() {
+  try {
+    sessionStorage.setItem(BANNER_DISMISSED_KEY, "1");
+  } catch {
+  }
+}
+
+function initMobileBanner() {
+  const banner = document.getElementById("mobile-banner");
+  if (!banner) return;
+
+  const dismissButton = banner.querySelector(".mobile-banner-dismiss");
+
+  if (getBannerDismissed()) {
+    banner.classList.add("is-dismissed");
+    banner.setAttribute("aria-hidden", "true");
+    return;
+  }
+
+  dismissButton?.addEventListener("click", () => {
+    banner.classList.add("is-dismissed");
+    banner.setAttribute("aria-hidden", "true");
+    setBannerDismissed();
+  });
+}
+
+initMobileBanner();
