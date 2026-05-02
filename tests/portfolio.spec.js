@@ -96,3 +96,65 @@ test.describe('Portfolio UI Tests', () => {
   });
 
 });
+
+test.describe('Mobile banner — root index.html', () => {
+  test('banner element is present in root index.html DOM', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    await expect(page.locator('#mobile-banner')).toHaveCount(1);
+  });
+
+  test('banner is visible at mobile viewport 375×812 on root page', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    const banner = page.locator('#mobile-banner');
+    await expect(banner).toBeVisible();
+  });
+
+  test('banner is hidden at desktop viewport 1280×800 on root page', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    const banner = page.locator('#mobile-banner');
+    await expect(banner).toBeHidden();
+  });
+
+  test('clicking dismiss on root page hides the banner', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    const banner = page.locator('#mobile-banner');
+    await expect(banner).toBeVisible();
+    await page.locator('#mobile-banner .mobile-banner-dismiss').click();
+    await expect(banner).toBeHidden();
+  });
+
+  test('supporting text appears before CTA in DOM order', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    const textIndex = await page.evaluate(() => {
+      const banner = document.querySelector('#mobile-banner');
+      const children = Array.from(banner.children);
+      return children.findIndex(el => el.classList.contains('mobile-banner-text'));
+    });
+    const ctaIndex = await page.evaluate(() => {
+      const banner = document.querySelector('#mobile-banner');
+      const children = Array.from(banner.children);
+      return children.findIndex(el => el.classList.contains('mobile-banner-cta'));
+    });
+    expect(textIndex).toBeLessThan(ctaIndex);
+  });
+
+  test('CTA click opens a new tab to https://portfolio.shaurya.online', async ({ page, context }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
+    const [newPage] = await Promise.all([
+      context.waitForEvent('page'),
+      page.locator('#mobile-banner .mobile-banner-cta').click(),
+    ]);
+    await newPage.waitForLoadState('domcontentloaded');
+    expect(newPage.url()).toContain('portfolio.shaurya.online');
+  });
+});

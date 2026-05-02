@@ -2002,7 +2002,6 @@ body.site-ready .hero-stage {
   .site-footer {
     width: min(calc(100% - 1.2rem), var(--max-width));
   }
-
   .section {
     padding: 4.2rem 0;
   }
@@ -2271,5 +2270,108 @@ body.site-ready .hero-stage {
   body:not(.site-ready) .side-nav {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* ── Mobile Banner ─────────────────────────────────────── */
+
+.mobile-banner {
+  display: none;
+  position: relative;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin-inline: auto;
+  padding: 5.1rem 2.5rem 1.1rem 0;
+  margin-bottom: -2rem;
+  /* padding: 1.1rem 2.5rem 1.1rem 0; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .mobile-banner {
+    display: flex;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+  .mobile-banner {
+    margin-top: -3rem;
+    margin-bottom: 0.2rem;
+  }
+  .mobile-banner-dismiss {
+    right: 5rem !important;
+  }
+}
+
+.mobile-banner.is-dismissed {
+  display: none !important;
+}
+
+.mobile-banner-text {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.mobile-banner-cta {
+  display: inline;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  transition: text-decoration-color 180ms ease, opacity 180ms ease;
+}
+
+.mobile-banner-cta:hover,
+.mobile-banner-cta:focus-visible {
+  text-decoration-color: var(--text);
+  opacity: 0.85;
+}
+
+.mobile-banner-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.mobile-banner-dismiss {
+  position: absolute;
+  top: 72%;
+  right: 0;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.mobile-banner-dismiss:hover,
+.mobile-banner-dismiss:focus-visible {
+  color: var(--text);
+}
+
+.mobile-banner-dismiss:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-banner-cta,
+  .mobile-banner-dismiss {
+    transition: none;
   }
 }
