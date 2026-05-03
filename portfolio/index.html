@@ -1123,7 +1123,7 @@
     </div>
     
     <footer class="footer" id="contact">
-      <p class="footer-text">The nights just aren't tandoori anymore. © 2026 Shaurya Verma.</p>
+      <p class="footer-text">The nights just aren't tandoori anymore.<br> © 2026 Shaurya Verma.</p>
       <div class="footer-links">
         <a href="https://shaurya.online" target="_blank" rel="noopener noreferrer"><u>Desktop Site</u></a>
         <!-- <a href="mailto:shauryaverma.tech@gmail.com" target="_blank">Email</a> -->
@@ -1148,9 +1148,9 @@
     function updateLocalTime() {
       const now = new Date();
       const timeString = now.toLocaleTimeString('en-US', {
-        hour: '2-digit',
+        hour: 'numeric',
         minute: '2-digit',
-        hour12: false,
+        hour12: true,
         timeZone: 'Asia/Kolkata'
       });
       const timeEl = document.getElementById('localTime');
