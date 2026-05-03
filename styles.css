@@ -1818,6 +1818,9 @@ body.site-ready .hero-stage {
   .side-nav {
     display: none;
   }
+  .site-footer {
+    margin-bottom: 2.4rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1844,6 +1847,9 @@ body.site-ready .hero-stage {
   .section-head h2,
   .contact-copy h2 {
     max-width: none;
+  }
+  .site-footer {
+    margin-bottom: 2.1rem;
   }
 }
 
@@ -2135,7 +2141,7 @@ body.site-ready .hero-stage {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 
   .chess-shell {
@@ -2211,6 +2217,9 @@ body.site-ready .hero-stage {
   .certification-row,
   .footer-links {
     gap: 0.7rem;
+  }
+  .site-footer {
+    padding-bottom: 4rem;
   }
 }
 
