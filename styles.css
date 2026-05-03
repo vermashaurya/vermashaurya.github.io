@@ -700,6 +700,24 @@ h3 {
   margin-top: 2rem;
 }
 
+.cursor {
+  animation: blink 0.8s infinite;
+  visibility: hidden;
+}
+.cursor1 {
+  animation: blink 0.8s infinite;
+  padding-bottom: 0.2rem;
+}
+.cursor2 {
+  animation: blink 0.8s infinite;
+  font-size: 3.2rem;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .button {
   display: inline-flex;
   align-items: center;

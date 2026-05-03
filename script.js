@@ -225,6 +225,47 @@ tiltItems.forEach((item) => {
   });
 });
 
+const textElement = document.getElementById('typewriter');
+const phrases = [
+  "personality.",
+  "creativity.",
+  "touch of life."
+];
+
+let phraseIndex = 0;
+let characterIndex = 0;
+let isDeleting = false;
+let typeSpeed = 27;
+
+function type() {
+  const currentPhrase = phrases[phraseIndex];
+  
+  if (isDeleting) {
+    // Remove a character
+    textElement.textContent = currentPhrase.substring(0, characterIndex - 1);
+    characterIndex--;
+    typeSpeed = 50; 
+  } else {
+    // Add a character
+    textElement.textContent = currentPhrase.substring(0, characterIndex + 1);
+    characterIndex++;
+    typeSpeed = 120;
+  }
+
+  if (!isDeleting && characterIndex === currentPhrase.length) {
+    isDeleting = true;
+    typeSpeed = 2000; 
+  } else if (isDeleting && characterIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    typeSpeed = 500;
+  }
+
+  setTimeout(type, typeSpeed);
+}
+
+document.addEventListener('DOMContentLoaded', type);
+
 const updateChrome = () => {
   const currentScrollY = window.scrollY;
   const isCompact = currentScrollY > 8;
