@@ -134,7 +134,7 @@ CI runs automatically on every push via `.github/workflows/playwright.yml`.
 ## License
 
 This project is licensed under the [MIT License](LICENSE). 
-<br><br> Copyright (c) 2026 <br>
+<br><br> Copyright © 2026 <br>
 <img src="assets/name-geo.avif" alt="Logo" width="600"/>  <br> <br>
 [![License](https://img.shields.io/github/license/vermashaurya/vermashaurya.github.io)](LICENSE) [![Security](https://img.shields.io/badge/Security-Policy-blue)](SECURITY.md)<br>
 Feel free to take inspiration. <br>Happy Coding!
