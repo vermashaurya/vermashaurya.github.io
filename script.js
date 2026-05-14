@@ -239,12 +239,12 @@ let typeSpeed = 27;
 
 function type() {
   const currentPhrase = phrases[phraseIndex];
-  
+
   if (isDeleting) {
     // Remove a character
     textElement.textContent = currentPhrase.substring(0, characterIndex - 1);
     characterIndex--;
-    typeSpeed = 50; 
+    typeSpeed = 50;
   } else {
     // Add a character
     textElement.textContent = currentPhrase.substring(0, characterIndex + 1);
@@ -254,7 +254,7 @@ function type() {
 
   if (!isDeleting && characterIndex === currentPhrase.length) {
     isDeleting = true;
-    typeSpeed = 2000; 
+    typeSpeed = 2000;
   } else if (isDeleting && characterIndex === 0) {
     isDeleting = false;
     phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -504,7 +504,7 @@ const handleCorrectMove = () => {
 
 const handleWrongMove = () => {
   puzzleLocked = true;
-  setMessage("Not mate. Hit reset and try the knight move again.");
+  setMessage("Not mate. Hit reset and try again.");
   chessSuccess?.classList.add("hidden");
   renderBoard();
 };
