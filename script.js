@@ -504,7 +504,7 @@ const handleCorrectMove = () => {
 
 const handleWrongMove = () => {
   puzzleLocked = true;
-  setMessage("Not mate. Hit reset and try the knight move again.");
+  setMessage("Not mate. Hit reset and try the again.");
   chessSuccess?.classList.add("hidden");
   renderBoard();
 };
